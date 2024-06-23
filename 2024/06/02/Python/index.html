@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="黄越">
+    <meta name="description" content="个人博客">
+    <meta name="author" content="Huang Yue">
+    
+    <title>
+        
+            Python |
+        
+        Huang Yue
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/HY.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"yudanzhizhi.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Huang Yue","author":"Huang Yue","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/HY.svg"},"menu":{"home":"/","archives":"/archives","keep":"https://keep-docs.xpoet.cn/"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你好，我的朋友","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/yudanzhizhi","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"yeahhuangyue@163.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2024,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.3"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Huang Yue
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/"
+                            >
+                                
+                                KEEP
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/"
+                    >KEEP</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        Python
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Huang Yue</span>
+                                
+                                    <span class="author-badge">Lv1</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-02 16:57:03</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sun Jun 23 2024 19:39:53 GMT+0800">2024-06-23 19:39:53</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    <h1 id="Python学习"><a href="#Python学习" class="headerlink" title="Python学习"></a>Python学习</h1><h2 id="入门基础语法"><a href="#入门基础语法" class="headerlink" title="入门基础语法"></a>入门基础语法</h2><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">&gt;&gt;&gt;a[::-<span class="number">1</span>]</span><br><span class="line"><span class="string">&#x27;edcba&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="number">1</span>:<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;b&#x27;</span></span><br><span class="line">&gt;&gt;&gt;a[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;ab&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">input</span>(<span class="string">&quot;请输入：&quot;</span>)</span><br><span class="line">请输入：ahahah</span><br><span class="line"><span class="string">&#x27;ahahah&#x27;</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">str</span>=<span class="string">&#x27;123456789&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>)                 <span class="comment"># 输出字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>[<span class="number">0</span>:-<span class="number">1</span>])           <span class="comment"># 输出第一个到倒数第二个的所有字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>[<span class="number">0</span>])              <span class="comment"># 输出字符串第一个字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>[<span class="number">2</span>:<span class="number">5</span>])            <span class="comment"># 输出从第三个开始到第六个的字符（不包含）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>[<span class="number">2</span>:])             <span class="comment"># 输出从第三个开始后的所有字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>[<span class="number">1</span>:<span class="number">5</span>:<span class="number">2</span>])          <span class="comment"># 输出从第二个开始到第五个且每隔一个的字符（步长为2）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span> * <span class="number">2</span>)             <span class="comment"># 输出字符串两次</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span> + <span class="string">&#x27;你好&#x27;</span>)         <span class="comment"># 连接字符串</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------------------------&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello\nrunoob&#x27;</span>)      <span class="comment"># 使用反斜杠(\)+n转义特殊字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;hello\nrunoob&#x27;</span>)     <span class="comment"># 在字符串前面添加一个 r，表示原始字符串，不会发生转义</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>while（没有do…while）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while &lt;condition&gt;:</span><br><span class="line">	&lt;statements&gt;</span><br><span class="line">else:</span><br><span class="line">	&lt;additional_statements&gt;</span><br></pre></td></tr></table></figure>
+
+<p>for：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> &lt;variable&gt; <span class="keyword">in</span> &lt;sequence&gt;:</span><br><span class="line">    &lt;statements&gt;</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    &lt;statements&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="推导式"><a href="#推导式" class="headerlink" title="推导式"></a>推导式</h3><h5 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 列表] </span><br><span class="line">[out_exp_res <span class="keyword">for</span> out_exp <span class="keyword">in</span> input_list]</span><br><span class="line"></span><br><span class="line">或者 </span><br><span class="line"></span><br><span class="line">[表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 列表 <span class="keyword">if</span> 条件]</span><br><span class="line">[out_exp_res <span class="keyword">for</span> out_exp <span class="keyword">in</span> input_list <span class="keyword">if</span> condition]</span><br><span class="line"></span><br><span class="line">example:</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>names = [<span class="string">&#x27;Bob&#x27;</span>,<span class="string">&#x27;Tom&#x27;</span>,<span class="string">&#x27;alice&#x27;</span>,<span class="string">&#x27;Jerry&#x27;</span>,<span class="string">&#x27;Wendy&#x27;</span>,<span class="string">&#x27;Smith&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>new_names = [name.upper() <span class="keyword">for</span> name <span class="keyword">in</span> names <span class="keyword">if</span> <span class="built_in">len</span>(name)&gt;<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(new_names)</span><br><span class="line">[<span class="string">&#x27;ALICE&#x27;</span>, <span class="string">&#x27;JERRY&#x27;</span>, <span class="string">&#x27;WENDY&#x27;</span>, <span class="string">&#x27;SMITH&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">在python中二进制用0b加相应数字来表示，<span class="number">8</span>进制用0o加相应数字来表示，<span class="number">16</span>进制用0x加相应数字来表示。即:</span><br><span class="line">    </span><br><span class="line"><span class="comment">#其他进制转换二进制#</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="number">2</span>) <span class="comment">#十进制转换二进制#</span></span><br><span class="line"><span class="string">&#x27;0b10&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="number">0o10</span>) <span class="comment">#八进制转换二进制#</span></span><br><span class="line"><span class="string">&#x27;0b1000&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">bin</span>(<span class="number">0xf</span>) <span class="comment">#十六进制转换二进制#</span></span><br><span class="line"><span class="string">&#x27;0b1111&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#其他进制转换为八进制#</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0b101</span>)</span><br><span class="line"><span class="string">&#x27;0o5&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0xf</span>)</span><br><span class="line"><span class="string">&#x27;0o17&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">oct</span>(<span class="number">0o123</span>)</span><br><span class="line"><span class="string">&#x27;0o123&#x27;</span></span><br><span class="line">        </span><br><span class="line"><span class="comment">#其他进制转换为十六进制#</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">0o10</span>)</span><br><span class="line"><span class="string">&#x27;0x8&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">3</span>)</span><br><span class="line"><span class="string">&#x27;0x3&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">hex</span>(<span class="number">0b111</span>)</span><br><span class="line"><span class="string">&#x27;0x7&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#其他进制转换为十进制#</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="number">0o10</span>)</span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="number">0xf</span>)</span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">int</span>(<span class="number">0b10</span>)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h1><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h5 id="列表（list）："><a href="#列表（list）：" class="headerlink" title="列表（list）：[]"></a>列表（list）：[]</h5><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>list.append(x)</td>
+<td>把一个元素添加到列表的结尾，相当于a[len(a):] &#x3D; [x]</td>
+</tr>
+<tr>
+<td>list.clear()</td>
+<td>移除列表中的所有项，等于del a[:]。</td>
+</tr>
+<tr>
+<td>list.copy()</td>
+<td>返回列表的浅复制，等于a[:]。</td>
+</tr>
+<tr>
+<td>list.count(x)</td>
+<td>返回 x 在列表中出现的次数。</td>
+</tr>
+<tr>
+<td>list.extend(L)</td>
+<td>通过添加指定列表的所有元素来扩充列表，相当于 a[len(a):] &#x3D; L。</td>
+</tr>
+<tr>
+<td>list.index(x)</td>
+<td>返回列表中第一个值为 x 的元素的索引。如果没有匹配的元素就会返回一个错误。</td>
+</tr>
+<tr>
+<td>list.insert(i, x)</td>
+<td>在指定位置插入一个元素。第一个参数是准备插入到其前面的那个元素的索引，例如 a.insert(0, x) 会插入到整个列表之前，而 a.insert(len(a), x) 相当于 a.append(x) 。</td>
+</tr>
+<tr>
+<td>list.pop([i])</td>
+<td>从列表的指定位置移除元素，并将其返回。如果没有指定索引，a.pop()返回最后一个元素。元素随即从列表中被移除。（方法中 i 两边的方括号表示这个参数是可选的，而不是要求你输入一对方括号，你会经常在 Python 库参考手册中遇到这样的标记。）</td>
+</tr>
+<tr>
+<td>list.remove(x)</td>
+<td>删除列表中值为 x 的第一个元素。如果没有这样的元素，就会返回一个错误。</td>
+</tr>
+<tr>
+<td>list.reverse()</td>
+<td>倒排列表中的元素。</td>
+</tr>
+<tr>
+<td>list.sort(cmp&#x3D;None, key&#x3D;None, reverse&#x3D;False)</td>
+<td>对列表中的元素进行排序。  cmp – 可选参数, 如果指定了该参数会使用该参数的方法进行排序。 key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。 reverse – 排序规则，<strong>reverse &#x3D; True</strong> 降序， <strong>reverse &#x3D; False</strong> 升序（默认）。</td>
+</tr>
+</tbody></table>
+<h6 id="删除元素的四种方法"><a href="#删除元素的四种方法" class="headerlink" title="删除元素的四种方法"></a>删除元素的四种方法</h6><ol>
+<li>del listname[index]</li>
+<li>listname.pop(index)</li>
+<li>listname.remove(value)</li>
+<li>listname.clear()</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">66.25</span>, <span class="number">333</span>, <span class="number">333</span>, <span class="number">1</span>, <span class="number">1234.5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a.count(<span class="number">333</span>), a.count(<span class="number">66.25</span>), a.count(<span class="string">&#x27;x&#x27;</span>))</span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.insert(<span class="number">2</span>, -<span class="number">1</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.append(<span class="number">333</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">66.25</span>, <span class="number">333</span>, -<span class="number">1</span>, <span class="number">333</span>, <span class="number">1</span>, <span class="number">1234.5</span>, <span class="number">333</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.index(<span class="number">333</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.remove(<span class="number">333</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">66.25</span>, -<span class="number">1</span>, <span class="number">333</span>, <span class="number">1</span>, <span class="number">1234.5</span>, <span class="number">333</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.reverse()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">333</span>, <span class="number">1234.5</span>, <span class="number">1</span>, <span class="number">333</span>, -<span class="number">1</span>, <span class="number">66.25</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[-<span class="number">1</span>, <span class="number">1</span>, <span class="number">66.25</span>, <span class="number">333</span>, <span class="number">333</span>, <span class="number">1234.5</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>元组（tuple）：()</p>
+<h5 id="字典（dictionary）："><a href="#字典（dictionary）：" class="headerlink" title="字典（dictionary）：{}"></a>字典（dictionary）：{}</h5><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dict.get(key[, value])</td>
+<td>返回指定键的值，如果键不在字典中返回默认值 None或者设置的默认值。</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">方法：<span class="built_in">dict</span>.get(key[, value])</span><br><span class="line">描述：返回指定键的值，如果键不在字典中返回默认值 <span class="literal">None</span>或者设置的默认值。</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">&#x27;URL: &#x27;</span>, a.get(<span class="string">&#x27;url&#x27;</span>))     <span class="comment"># 返回 None</span></span><br><span class="line">URL:  <span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Runoob&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">27</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span> (<span class="string">&quot;Age : %s&quot;</span> %  b.get(<span class="string">&#x27;Age&#x27;</span>))</span><br><span class="line">Age : <span class="number">27</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span> (<span class="string">&quot;Sex : %s&quot;</span> %  b.get(<span class="string">&#x27;Sex&#x27;</span>))  </span><br><span class="line">Sex : <span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span> (<span class="string">&#x27;Salary: %s&#x27;</span> % b.get(<span class="string">&#x27;Salary&#x27;</span>, <span class="number">0.0</span>))</span><br><span class="line">Salary: <span class="number">0.0</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="collecttions模块中的计数器Counter"><a href="#collecttions模块中的计数器Counter" class="headerlink" title="collecttions模块中的计数器Counter()"></a>collecttions模块中的计数器Counter()</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cnt = Counter()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h2><h3 id="生成器generator"><a href="#生成器generator" class="headerlink" title="生成器generator"></a>生成器generator</h3><p>创建：与用表达式创建列表一样，只不过将[]换成()</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [x * x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>L</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>g = (x * x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>g</span><br><span class="line">&lt;generator <span class="built_in">object</span> &lt;genexpr&gt; at <span class="number">0x1022ef630</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h5 id="set"><a href="#set" class="headerlink" title="set()"></a>set()</h5><p>set() 函数创建一个无序不重复元素集，可进行关系测试，删除重复数据，还可以计算交集、差集、并集等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; x = set(&#x27;eleven&#x27;)</span><br><span class="line">&gt;&gt;&gt; y = set(&#x27;twelve&#x27;)</span><br><span class="line">&gt;&gt;&gt; x,y</span><br><span class="line">(&#123;&#x27;l&#x27;, &#x27;e&#x27;, &#x27;n&#x27;, &#x27;v&#x27;&#125;, &#123;&#x27;e&#x27;, &#x27;v&#x27;, &#x27;l&#x27;, &#x27;t&#x27;, &#x27;w&#x27;&#125;)</span><br><span class="line">&gt;&gt;&gt; x &amp; y  #交集</span><br><span class="line">&#123;&#x27;l&#x27;, &#x27;e&#x27;, &#x27;v&#x27;&#125;</span><br><span class="line">&gt;&gt;&gt; x | y  #并集</span><br><span class="line">&#123;&#x27;e&#x27;, &#x27;v&#x27;, &#x27;n&#x27;, &#x27;l&#x27;, &#x27;t&#x27;, &#x27;w&#x27;&#125;</span><br><span class="line">&gt;&gt;&gt; x - y  #差集</span><br><span class="line">&#123;&#x27;n&#x27;&#125;</span><br><span class="line">&gt;&gt;&gt; y -x   #差集</span><br><span class="line">&#123;&#x27;t&#x27;, &#x27;w&#x27;&#125;</span><br><span class="line">&gt;&gt;&gt; x ^ y  #补集</span><br><span class="line">&#123;&#x27;t&#x27;, &#x27;n&#x27;, &#x27;w&#x27;&#125;</span><br><span class="line">&gt;&gt;&gt; y ^ x  #补集</span><br><span class="line">&#123;&#x27;w&#x27;, &#x27;n&#x27;, &#x27;t&#x27;&#125;</span><br><span class="line">&gt;&gt;&gt; </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><h5 id="open-函数"><a href="#open-函数" class="headerlink" title="open()函数"></a>open()函数</h5><p>f &#x3D; open(“路径”, “模式”, 编码)，成功后返回一个文件对象</p>
+<p>&#x2F;&#x2F; r—–读取模式（只读） w——写入模式（只写）a——附加模式  r+——读写模式（文件内容后追加）</p>
+<p>&#x2F;&#x2F;编码为可选项，encoding&#x3D;”UTF-8”</p>
+<p>&#x2F;&#x2F;r模式下若文件不存在则会报错，而w&#x2F;a模式会创建一个新的文件</p>
+<h4 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h4><h5 id="read-方法"><a href="#read-方法" class="headerlink" title="read()方法"></a>read()方法</h5><p>f.read()，一次性读取文件内所有内容并以字符串形式进行返回</p>
+<p>&#x2F;&#x2F;程序会记录文件读取位置，因此再次调用read()返回的结果为空</p>
+<p>f.read(10) &#x2F;&#x2F;读取第1-10个字节的文件内容</p>
+<p>f.read(10) &#x2F;&#x2F;再次调用，读取第11-20个字节的文件内容</p>
+<h5 id="readline-方法"><a href="#readline-方法" class="headerlink" title="readline()方法"></a>readline()方法</h5><p>f.readline()，根据换行符来判断（换行符也会被读取），只读一行文件内容</p>
+<p>&#x2F;&#x2F;通过返回值是否为空判断是否读到文件结尾</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">line=f.readline()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> line != <span class="string">&quot;&quot;</span>:</span><br><span class="line"></span><br><span class="line">	<span class="built_in">print</span>(line)</span><br><span class="line"></span><br><span class="line">	line= f.readline()</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="readlines-方法"><a href="#readlines-方法" class="headerlink" title="readlines()方法"></a>readlines()方法</h5><p>f.readlines()，读取文件全部内容，把每行作为列表元素返回</p>
+<p>lines&#x3D; f.readlines()</p>
+<p>for line in lines:</p>
+<p>​	print(line)</p>
+<h5 id="close-方法"><a href="#close-方法" class="headerlink" title="close()方法"></a>close()方法</h5><p>f.close()，关闭文件</p>
+<h5 id="with关键字"><a href="#with关键字" class="headerlink" title="with关键字"></a>with关键字</h5><p>with open(“url”) as f:</p>
+<p>​	print(f.read())  &#x2F;&#x2F;文件操作</p>
+<p>&#x2F;&#x2F;完成所有操作后自动关闭文件</p>
+<h4 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h4><p>&#x2F;&#x2F;w模式打开文件进行写入时，若文件原本已经存在，会清空原有内容，a模式不会</p>
+<p>&#x2F;&#x2F;w和a都没有read()</p>
+<h5 id="write-方法"><a href="#write-方法" class="headerlink" title="write()方法"></a>write()方法</h5><p>f.write(“Hello! “)</p>
+<p>f.write(“Yoooo”)</p>
+<img    
+                       lazyload
+                       alt="image"
+                       data-src="/public/images/Python/image-20230710113808573.png"
+                         alt="image-20230710113808573"  
+                 >
+
+<p>&#x2F;&#x2F;不会默认换行</p>
+<h2 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h2><h3 id="HTTP请求和响应"><a href="#HTTP请求和响应" class="headerlink" title="HTTP请求和响应"></a>HTTP请求和响应</h3><h4 id="请求：请求行-请求头-请求体"><a href="#请求：请求行-请求头-请求体" class="headerlink" title="请求：请求行+请求头+请求体"></a>请求：请求行+请求头+请求体</h4><p>GET（一般都是用GET）——用于获得数据：进入一个网页时，浏览器发送GET请求，得到网页内容</p>
+<p>POST——用于创建数据：提交账号注册表单时，浏览器发送POST请求，把用户名、密码等信息放到请求主体里给到服务器</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="/public/images/Python/image-20230711141038179.png"
+                        alt="image-20230711141038179"
+                 ></p>
+<h5 id="请求行：方法类型-资源路径-协议版本"><a href="#请求行：方法类型-资源路径-协议版本" class="headerlink" title="请求行：方法类型 资源路径 协议版本"></a><strong>请求行</strong>：方法类型 资源路径 协议版本</h5><p>资源路径指明要访问服务器的哪个资源，如<a class="link"   target="_blank" rel="noopener" href="http://www.douban.com/movie/top250%EF%BC%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%9C%E6%9D%A0%EF%BC%88/%EF%BC%89%E8%A1%A8%E7%A4%BA%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E7%9A%84%E6%A0%B9%EF%BC%8C%E6%89%80%E4%BB%A5%E6%A0%B9%E5%90%8E%E9%9D%A2%E7%9A%84/movie/top250%E5%B0%B1%E6%98%AF%E8%A6%81%E8%AE%BF%E9%97%AE%E7%9A%84%E8%B5%84%E6%BA%90%E7%9A%84%E8%B7%AF%E5%BE%84" >www.douban.com/movie/top250，第一个斜杠（/）表示资源路径的根，所以根后面的/movie/top250就是要访问的资源的路径<i class="fas fa-external-link-alt"></i></a></p>
+<p>有时候还可以给出查询参数，问号（？）后面的就是查询参数，可以传递给服务器额外的信息，不同信息之间用&amp;分隔</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711142010345.png"
+                        alt="image-20230711142010345"
+                 ></p>
+<h5 id="请求头：会包含一些给服务器的信息"><a href="#请求头：会包含一些给服务器的信息" class="headerlink" title="请求头：会包含一些给服务器的信息"></a><strong>请求头</strong>：会包含一些给服务器的信息</h5><p>Host指主机域名，主机域名结合请求行里的路径资源，可以得到一个完整的网址</p>
+<p>User-Agent用来告知服务器客服端的相关信息</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711142657117.png"
+                        alt="image-20230711142657117"
+                 ></p>
+<p>Accept是在告诉浏览器客户端想要接受的响应数据是什么类型的，接受多种类型可以用逗号分隔</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711142919925.png"
+                        alt="image-20230711142919925"
+                 ></p>
+<h5 id="请求体：里面可以放客户端传给服务器的其他任意数据，但是GET的请求体一般是空的"><a href="#请求体：里面可以放客户端传给服务器的其他任意数据，但是GET的请求体一般是空的" class="headerlink" title="请求体：里面可以放客户端传给服务器的其他任意数据，但是GET的请求体一般是空的"></a><strong>请求体</strong>：里面可以放客户端传给服务器的其他任意数据，但是GET的请求体一般是空的</h5><h4 id="响应：状态行-响应头-响应体"><a href="#响应：状态行-响应头-响应体" class="headerlink" title="响应：状态行+响应头+响应体"></a>响应：状态行+响应头+响应体</h4><p><img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711143218189.png"
+                        alt="image-20230711143218189"
+                 ></p>
+<h5 id="状态行：协议版本-状态码-状态消息"><a href="#状态行：协议版本-状态码-状态消息" class="headerlink" title="状态行：协议版本 状态码 状态消息"></a><strong>状态行</strong>：协议版本 状态码 状态消息</h5><p>2开头表示成功，请求已完成处理；3开头表示重定向，需要进一步操作；4开头表示客户端错误，如请求里面有错误或请求的资源无效；5开头表示服务器错误，如出现问题或正在维护</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711143450690.png"
+                        alt="image-20230711143450690"
+                 ></p>
+<h5 id="响应头：包含一些告知客户端的信息"><a href="#响应头：包含一些告知客户端的信息" class="headerlink" title="响应头：包含一些告知客户端的信息"></a>响应头：包含一些告知客户端的信息</h5><p>Date，生产日期和时间</p>
+<p>Content-Type，返回内容的类型及编码格式<img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711144210296.png"
+                        alt="image-20230711144210296"
+                 ></p>
+<h5 id="响应体：服务器想给客户端的数据内容"><a href="#响应体：服务器想给客户端的数据内容" class="headerlink" title="响应体：服务器想给客户端的数据内容"></a>响应体：服务器想给客户端的数据内容</h5><p>响应体里面的信息是我们秀昂要的信息</p>
+<h3 id="构建和发送HTTP请求——Requests库"><a href="#构建和发送HTTP请求——Requests库" class="headerlink" title="构建和发送HTTP请求——Requests库"></a>构建和发送HTTP请求——Requests库</h3><h5 id="get-方法"><a href="#get-方法" class="headerlink" title="get()方法"></a>get()方法</h5><p>response &#x3D; requests.get(URL)</p>
+<p>&#x2F;&#x2F;网址实际的URL还包括协议名</p>
+<h5 id="ok属性"><a href="#ok属性" class="headerlink" title="ok属性"></a>ok属性</h5><p>response.ok，返回布尔值，True为成功</p>
+<h5 id="text属性"><a href="#text属性" class="headerlink" title="text属性"></a>text属性</h5><p>response.text，以字符串储存响应内容</p>
+<h5 id="headers参数"><a href="#headers参数" class="headerlink" title="headers参数"></a>headers参数</h5><p>response &#x3D; requests.get(URL, headers&#x3D;***)</p>
+<p>数据类型为字典，里面的哥哥键值对对应了我们要传入的各个信息</p>
+<p>一个例子：可以帮我们把爬虫程序伪装成正常浏览器。当我们使用浏览器时，浏览器向服务器发送GET请求，并且请求头的User-Agent会自动带有浏览器类型及版本，还有电脑的操作系统等等，用代码发送请求不会带有这些信息，服务器可以通过这一点判断进来的请求是来自浏览器还是程序</p>
+<h3 id="解析网页内容——Beautiful-Soup库"><a href="#解析网页内容——Beautiful-Soup库" class="headerlink" title="解析网页内容——Beautiful Soup库"></a>解析网页内容——Beautiful Soup库</h3><p>from bs4 impot BeautifulSoup</p>
+<p>import requests</p>
+<p>content &#x3D; requests.get(URL).text</p>
+<h5 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h5><p>soup &#x3D; BeautifulSoup(content, “html.parser”)，获得一个实例对象，解析成下图所示的树形结构</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="C:\Users\yeahh\AppData\Roaming\Typora\typora-user-images\image-20230711161459373.png"
+                        alt="image-20230711161459373"
+                 ></p>
+<h5 id="各种方法"><a href="#各种方法" class="headerlink" title="各种方法"></a>各种方法</h5><p>soup.p，得到这个HTML里的第一个p元素。若p里面还有其他标签，会把它们一起返回</p>
+<p>soup.img，第一个img元素</p>
+<h5 id="find-方法"><a href="#find-方法" class="headerlink" title="find()方法"></a>find()方法</h5><p>link &#x3D; title.find(“a”)</p>
+<p>返回第一个对象，此例中为返回title里的第一个a元素</p>
+<h5 id="find-All-方法"><a href="#find-All-方法" class="headerlink" title="find_All()方法"></a>find_All()方法</h5><p>soup.findAll()，能根据标签、属性等找出所有符合要求的元素</p>
+<p>all_prices &#x3D; soup.findAll(“p”, attrs&#x3D;{“class”: “price_color”})，atts为可选参数，是一个字典，键值对就对应你想找的属性和值</p>
+<p>返回一个可迭代对象，所以可以通过循环依次操作返回的各个对象</p>
+<h5 id="string属性"><a href="#string属性" class="headerlink" title="string属性"></a>string属性</h5><p>for price in all_prices:</p>
+<p>​	print(price.string)</p>
+<p>会把标签包围的文字返回给我们</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/02/hello-world/"
+                                   title="Hello World"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Hello World</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Huang Yue</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+                <span class="count-item border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+<!-- common -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/lazyload.min.js"></script>
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.3/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
