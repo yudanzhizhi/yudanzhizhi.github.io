@@ -199,7 +199,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sun Aug 04 2024 20:16:33 GMT+0800">2024-08-04 20:16:33</span>
+                <span class="datetime" data-updated="Sun Aug 04 2024 20:17:54 GMT+0800">2024-08-04 20:17:54</span>
             </span>
         
 
@@ -291,6 +291,16 @@
 
 <h1 id="最长连续序列"><a href="#最长连续序列" class="headerlink" title="最长连续序列"></a><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-consecutive-sequence/description/?envType=study-plan-v2&envId=top-100-liked" >最长连续序列<i class="fas fa-external-link-alt"></i></a></h1><h2 id="哈希-1"><a href="#哈希-1" class="headerlink" title="哈希"></a>哈希</h2><p>这里用了一个比较巧妙的方法：把所给的数组当作哈希表。对于所给数组里的数 num ，如果 num - 1 不在数组里，说明 num 是序列的起始，接下来就可以看 num + 1 是否存在，直到 num + 1 不在数组里面，意味着序列结束。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">longestConsecutive</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        mp = <span class="built_in">set</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> mp:</span><br><span class="line">            <span class="keyword">if</span> i - <span class="number">1</span> <span class="keyword">not</span> <span class="keyword">in</span> mp:</span><br><span class="line">                tmp = <span class="number">1</span></span><br><span class="line">                <span class="keyword">while</span> i + <span class="number">1</span> <span class="keyword">in</span> mp:</span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line">                    tmp += <span class="number">1</span></span><br><span class="line">                count = <span class="built_in">max</span>(count, tmp)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> count</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
 
 
 
