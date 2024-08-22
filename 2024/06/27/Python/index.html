@@ -199,7 +199,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Aug 21 2024 15:22:17 GMT+0800">2024-08-21 15:22:17</span>
+                <span class="datetime" data-updated="Thu Aug 22 2024 10:33:28 GMT+0800">2024-08-22 10:33:28</span>
             </span>
         
 
@@ -300,7 +300,18 @@
 <td>右移</td>
 <td>各二进位全部右移若干位，对无符号数，高位补0，有符号数，各编译器处理方法不一样，有的补符号位（算术右移），有的补0（逻辑右移）</td>
 </tr>
+<tr>
+<td>int.bit_length()</td>
+<td>二进制数长度</td>
+<td>获得int的二进制表示的长度（不包含0b）</td>
+</tr>
+<tr>
+<td>int.bit_count()</td>
+<td>1的个数</td>
+<td>获得int的二进制表示中1的个数</td>
+</tr>
 </tbody></table>
+<p><code>((x &gt;&gt; i) &amp; 1) == 0</code> 意思是判断 x 的第 i 位是否为 0<br><code>x |= (1 &lt;&lt; i)</code> 意思是把 x 的第 i 位设置为 1 </p>
 <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="列表（list）："><a href="#列表（list）：" class="headerlink" title="列表（list）：[]"></a>列表（list）：[]</h2><table>
 <thead>
 <tr>
